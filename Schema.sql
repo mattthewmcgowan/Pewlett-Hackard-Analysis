@@ -46,4 +46,16 @@ CREATE TABLE dept_emp (
 	FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
 );
+ALTER TABLE departments 
+	ALTER COLUMN dept_no TYPE VARCHAR(5),
+	ALTER COLUMN dept_no SET NOT NULL
+	;
+ALTER TABLE dept_emp
+	ALTER COLUMN dept_no TYPE VARCHAR(5),
+	ALTER COLUMN dept_no SET NOT NULL
+	;
+ALTER TABLE dept_emp 
+	ALTER COLUMN emp_no TYPE VARCHAR(5),
+	ALTER COLUMN emp_no SET NOT NULL
+	;
 SELECT * FROM departments;
